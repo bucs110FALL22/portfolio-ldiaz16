@@ -1,6 +1,7 @@
 { pkgs }: {
 	deps = [
-		pkgs.python38Full
+		pkgs.python38Packages.clvm-tools
+  pkgs.python38Full
 	];
   env = {
     LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath ([
