@@ -20,17 +20,16 @@ total = rate * amount
 total = total - 3
 
 strTotal = str(total)
+# converts total into string to be more mutable
 sDot = strTotal.index('.')
-
-for i in range(len(strTotal)):
-  if i == sDot+3:
-    strTotal = strTotal[0:i]
-
+#finds index of '.' to seperate dollars form cents
 strCents = strTotal[sDot+1:sDot+3]
+#Since the max amount of cents can only be 2 digits, strCents takes the digit next to the '.' and the one after that
 strDollars = strTotal[0:sDot]
-
+#takes all digits from the beginning to the '.'
 dollars = int(strDollars)
+#converts strDollars back into int for easier operation 
 cents = int(strCents)
-
+#^^
 print("After the service fee has been applied, you have", dollars,"dollars and",cents,"Cents")
      
