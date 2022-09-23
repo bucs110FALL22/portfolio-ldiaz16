@@ -12,5 +12,5 @@ for i in range(3):
     print("Your value is too low")
   else:
     print("Correct")
-    i = 3
+    break
 print("It took you",num_guesses,"to get it right")    
