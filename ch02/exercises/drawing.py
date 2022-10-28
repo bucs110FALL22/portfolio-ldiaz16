@@ -1,5 +1,6 @@
 import turtle
 
+turt=turtle.screensize(600,300,'light blue')
 side = int(input("Enter number of sides: "))
 sideLength = int(input("Enter length of the sides: "))
 circle = 360
