@@ -1,4 +1,5 @@
-class StringUtility:
+uewchewlj;k gek'gm
+oethmpo4t4toclass StringUtility:
   def __init__(self, string):
     self.newString = string
     
