@@ -63,4 +63,5 @@ for i in range(10):
 #player1 is blue and orange
 #player2 is yellow and green
 pygame.display.flip()
-pygame.time.wait(7000)
+pygame.time.wait(7001)
+#submitting
