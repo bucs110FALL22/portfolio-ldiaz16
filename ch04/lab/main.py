@@ -34,6 +34,8 @@ pygame.draw.line(screen,'black',[width,radiusOf],[548,radiusOf],3)
 pygame.draw.line(screen,'black',[width+radiusOf,0],[radiusOf+width,274],3)
 
 #part B and c
+score_player1 = 0
+score_player2 = 0
 for i in range(10):
   x = random.randrange(0,width)
   y = random.randrange(0,height)
@@ -41,6 +43,7 @@ for i in range(10):
   is_in_circle = distance_from_center <= radiusOf
   if is_in_circle == True:
     pygame.draw.circle(screen,'blue',[x,y],3)
+    score_player1 = score_player1 + 1
   else:
     pygame.draw.circle(screen,'orange',[x,y],3)
   pygame.time.wait(800)
@@ -51,6 +54,7 @@ for i in range(10):
   is_in_circle = distance_from_center <= radiusOf
   if is_in_circle == True:
     pygame.draw.circle(screen,'yellow',[x2,y2],3)
+    score_player2 = score_player2 + 1
   else:
     pygame.draw.circle(screen,'green',[x2,y2],3)
   pygame.time.wait(800)
@@ -64,4 +68,9 @@ for i in range(10):
 #player2 is yellow and green
 pygame.display.flip()
 pygame.time.wait(7001)
-#submitting
+if score_player1 > score_player2:
+  print("Player 1 won")
+elif score_player1 < score_player2:
+  print("Player 2 won")
+else:
+  print("Tie game")
